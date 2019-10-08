@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Show-me-chat
 //
-//  Created by Mark Dorofeev on 19/09/2019.
-//  Copyright © 2019 Mark Dorofeev. All rights reserved.
+//  Created by Anton Brichev, Oleg Krylov, Mark Dorofeev on 19/09/2019.
+//  Copyright © 2019 Anton Brichev, Oleg Krylov, Mark Dorofeev. All rights reserved.
 //
 
 import UIKit

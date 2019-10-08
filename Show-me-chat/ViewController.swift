@@ -3,7 +3,7 @@
 //  ViewController.swift
 //  Show-me-chat
 //
-//  Created by Mark Dorofeev on 19/09/2019.
+//  Created by Anton Brichev, Oleg Krylov, Mark Dorofeev on 19/09/2019.
 //  Copyright © 2019 Mark Dorofeev. All rights reserved.
 //
 
