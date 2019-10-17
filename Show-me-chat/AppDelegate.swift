@@ -2,12 +2,14 @@
 //  AppDelegate.swift
 //  Show-me-chat
 //
-//  Created by Mark Dorofeev on 19/09/2019.
-//  Copyright © 2019 Mark Dorofeev. All rights reserved.
+//  Created by Anton Brichev, Oleg Krylov, Mark Dorofeev on 19/09/2019.
+//  Copyright © 2019 Anton Brichev, Oleg Krylov, Mark Dorofeev. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import YandexMapKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        YMKMapKit.setApiKey("ebb07ebe-291f-49ab-9313-6b5007940874аа")
         return true
     }
 
