@@ -23,7 +23,7 @@ DEPENDENCIES:
   - YandexMapKitTransport (= 3.4)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - YandexMapKit
     - YandexMapKitDirections
     - YandexMapKitPlaces
@@ -41,4 +41,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d347173bbd26028d045002b417af3b264abaf5a6
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.3
