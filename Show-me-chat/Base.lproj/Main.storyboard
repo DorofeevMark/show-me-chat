@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V7U-pY-i7I">
-    <device id="ipad12_9rounded" orientation="portrait">
-        <adaptation id="splitview1_3"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nad-xG-Lca">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="YMKMapView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-IS-urd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -39,18 +37,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="115"/>
+            <point key="canvasLocation" x="739" y="379"/>
         </scene>
-        <!--Login Screen New Controller-->
+        <!--Login New Controller-->
         <scene sceneID="dux-Ux-XOG">
             <objects>
-                <viewController id="cou-DR-TNC" customClass="LoginScreenNewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Login" storyboardIdentifier="Login" id="cou-DR-TNC" customClass="LoginNewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Gy-IL-pCc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для работы с приложением необходимо ввести номер телефона" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-FE-eU2">
-                                <rect key="frame" x="-27" y="1253" width="374" height="93"/>
+                                <rect key="frame" x="325" y="1253" width="374" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="0QH-NJ-hT3"/>
                                     <constraint firstAttribute="height" constant="93" id="Sjq-07-dts"/>
@@ -60,13 +58,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0t-LB-3qM">
-                                <rect key="frame" x="52" y="583" width="216" height="67"/>
+                                <rect key="frame" x="404" y="583" width="216" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-YB-h2E">
-                                <rect key="frame" x="-34" y="681" width="388" height="27"/>
+                                <rect key="frame" x="318" y="681" width="388" height="27"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucw-WO-SPc">
                                         <rect key="frame" x="0.0" y="0.0" width="388" height="27"/>
@@ -99,11 +97,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMo-nh-2aJ">
-                                <rect key="frame" x="103.5" y="1193" width="113" height="61"/>
+                                <rect key="frame" x="455.5" y="1193" width="113" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="B2Z-3H-sv3"/>
+                                    <action selector="didTapOpenButton:" destination="cou-DR-TNC" eventType="touchUpInside" id="bMh-AZ-Z7M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,34 +119,37 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Xj-7F-7lm"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonOPEN" destination="OMo-nh-2aJ" id="xeJ-S0-oCU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qg-4S-Tdv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57.971014492753625" y="114.50892857142857"/>
+            <point key="canvasLocation" x="-761" y="524"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Aaa-lG-f2l">
             <objects>
-                <viewController id="V7U-pY-i7I" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V7U-pY-i7I" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DKZ-gc-dQ3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-9y-dHw">
-                                <rect key="frame" x="23" y="79" width="274" height="67"/>
+                                <rect key="frame" x="375" y="55" width="274" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnE-ih-h3J">
-                                <rect key="frame" x="91" y="1247" width="138" height="70"/>
+                                <rect key="frame" x="443" y="1247" width="138" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="Выход">
                                     <color key="titleColor" red="1" green="0.089047731369999994" blue="0.11143136519999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="64U-kh-dic">
-                                <rect key="frame" x="54" y="628.5" width="212" height="109"/>
+                                <rect key="frame" x="406" y="628.5" width="212" height="109"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="29D-JE-C1k">
                                         <rect key="frame" x="0.0" y="0.0" width="212" height="31"/>
@@ -195,7 +196,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1L-en-SkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566.66666666666674" y="853.79464285714278"/>
+            <point key="canvasLocation" x="20" y="821"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="D2s-sX-rCC">
+            <objects>
+                <navigationController id="Nad-xG-Lca" customClass="RootViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ie-Zo-VR6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUH-zb-37K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="14"/>
         </scene>
     </scenes>
 </document>

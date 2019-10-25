@@ -12,6 +12,8 @@
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
 		3D542D962333F5D5005D401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D952333F5D5005D401F /* Assets.xcassets */; };
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
+		CE8BB5932359BB99001862CD /* RootViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5922359BB99001862CD /* RootViewController .swift */; };
+		CE8BB5952359BD75001862CD /* LoginNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginNewController.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		F5CE0649A4B9B81EEA9D5E02 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F4EEE4759FD476B698F289 /* Pods_Show_me_chat.framework */; };
 		FC938B950E7C2BE65600357A /* Pods_Show_me_chatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F6F7BCDAAFD2F4C94C02B3 /* Pods_Show_me_chatTests.framework */; };
@@ -42,6 +44,8 @@
 		44F6F7BCDAAFD2F4C94C02B3 /* Pods_Show_me_chatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F4EEE4759FD476B698F289 /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47378B77D56BA3EA1F6E689 /* Pods-Show-me-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.release.xcconfig"; sourceTree = "<group>"; };
+		CE8BB5922359BB99001862CD /* RootViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootViewController .swift"; sourceTree = "<group>"; };
+		CE8BB5942359BD75001862CD /* LoginNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNewController.swift; sourceTree = "<group>"; };
 		CEDB8FA4234CA2D300A7D8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAF987941567545F7D143837 /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +99,8 @@
 				3D542D9A2333F5D5005D401F /* Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
+				CE8BB5922359BB99001862CD /* RootViewController .swift */,
+				CE8BB5942359BD75001862CD /* LoginNewController.swift */,
 			);
 			path = "Show-me-chat";
 			sourceTree = "<group>";
@@ -298,6 +304,8 @@
 				3D542D8E2333F5D3005D401F /* ViewController.swift in Sources */,
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
+				CE8BB5952359BD75001862CD /* LoginNewController.swift in Sources */,
+				CE8BB5932359BB99001862CD /* RootViewController .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
