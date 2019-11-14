@@ -14,7 +14,6 @@ class RootViewController: UINavigationController{
         super.viewDidAppear(animated)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Login")
-            
         self.present(controller, animated: true, completion: nil)
     }
 }
