@@ -2,6 +2,11 @@
 # platform :ios, '9.0'
 
 target 'Show-me-chat' do
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
+
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -12,7 +17,6 @@ target 'Show-me-chat' do
     # Pods for testing
   end
 
-use_frameworks!
   # Основная библиотека MapKit.
   pod ‘YandexMapKit’, ’3.4’ 
   # Дополнительные модули MapKit.
