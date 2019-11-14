@@ -13,7 +13,7 @@ class RootViewController: UINavigationController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "Login")
+        let controller = storyboard.instantiateViewController(withIdentifier: "Chat")
         self.present(controller, animated: true, completion: nil)
     }
 }
