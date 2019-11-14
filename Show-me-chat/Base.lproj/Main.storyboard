@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nad-xG-Lca">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nad-xG-Lca">
+    <device id="ipad12_9rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="YMKMapView">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,89 +41,16 @@
             </objects>
             <point key="canvasLocation" x="739" y="379"/>
         </scene>
-        <!--Login New Controller-->
+        <!--Login Controller-->
         <scene sceneID="dux-Ux-XOG">
             <objects>
-                <viewController restorationIdentifier="Login" storyboardIdentifier="Login" id="cou-DR-TNC" customClass="LoginNewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Login" storyboardIdentifier="Login" id="cou-DR-TNC" customClass="LoginController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Gy-IL-pCc">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для работы с приложением необходимо ввести номер телефона" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-FE-eU2">
-                                <rect key="frame" x="325" y="1253" width="374" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="0QH-NJ-hT3"/>
-                                    <constraint firstAttribute="height" constant="93" id="Sjq-07-dts"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0t-LB-3qM">
-                                <rect key="frame" x="404" y="583" width="216" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kSe-YB-h2E">
-                                <rect key="frame" x="318" y="681" width="388" height="27"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucw-WO-SPc">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="27"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIw-Z3-AYT">
-                                                <rect key="frame" x="0.0" y="0.0" width="388" height="27"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+7" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4m-0C-aCs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="27"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="9u2-iT-tWe"/>
-                                                            <constraint firstAttribute="height" constant="27" id="oax-fi-Ftg"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="67"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4li-EO-TfU">
-                                                        <rect key="frame" x="45" y="0.0" width="343" height="27"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="343" id="6Ha-dD-9cZ"/>
-                                                            <constraint firstAttribute="height" constant="27" id="fUI-2Y-irF"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMo-nh-2aJ">
-                                <rect key="frame" x="455.5" y="1193" width="113" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <state key="normal" title="Войти"/>
-                                <connections>
-                                    <action selector="didTapOpenButton:" destination="cou-DR-TNC" eventType="touchUpInside" id="bMh-AZ-Z7M"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="OMo-nh-2aJ" firstAttribute="centerX" secondItem="1Gy-IL-pCc" secondAttribute="centerX" id="2Hs-6F-UEH"/>
-                            <constraint firstItem="Uvb-FE-eU2" firstAttribute="bottom" secondItem="6Xj-7F-7lm" secondAttribute="bottom" id="IB5-qI-zN0"/>
-                            <constraint firstItem="Uvb-FE-eU2" firstAttribute="top" secondItem="OMo-nh-2aJ" secondAttribute="bottom" constant="-1" id="PVd-0M-dvX"/>
-                            <constraint firstItem="kSe-YB-h2E" firstAttribute="centerX" secondItem="1Gy-IL-pCc" secondAttribute="centerX" id="Rjb-UO-KQo"/>
-                            <constraint firstItem="j0t-LB-3qM" firstAttribute="centerY" secondItem="1Gy-IL-pCc" secondAttribute="centerY" constant="-66.5" id="ZXc-qm-3sr"/>
-                            <constraint firstItem="kSe-YB-h2E" firstAttribute="top" secondItem="j0t-LB-3qM" secondAttribute="bottom" constant="31" id="cIv-Zh-jWo"/>
-                            <constraint firstItem="j0t-LB-3qM" firstAttribute="centerX" secondItem="1Gy-IL-pCc" secondAttribute="centerX" id="ohr-eS-kCp"/>
-                            <constraint firstItem="Uvb-FE-eU2" firstAttribute="centerX" secondItem="1Gy-IL-pCc" secondAttribute="centerX" id="qy0-W8-T3u"/>
-                            <constraint firstItem="OMo-nh-2aJ" firstAttribute="centerX" secondItem="1Gy-IL-pCc" secondAttribute="centerX" id="rk9-PK-78c"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Xj-7F-7lm"/>
                     </view>
-                    <connections>
-                        <outlet property="buttonOPEN" destination="OMo-nh-2aJ" id="xeJ-S0-oCU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Qg-4S-Tdv" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-9y-dHw">
-                                <rect key="frame" x="375" y="55" width="274" height="67"/>
+                                <rect key="frame" x="375" y="79" width="274" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -203,7 +132,7 @@
             <objects>
                 <navigationController id="Nad-xG-Lca" customClass="RootViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ie-Zo-VR6">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>

@@ -3,9 +3,6 @@
 
 target 'Show-me-chat' do
   # add the Firebase pod for Google Analytics
-  pod 'Firebase'
-  pod 'Firebase/Core'
-  pod 'Firebase/Analytics'
 
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -17,6 +14,7 @@ target 'Show-me-chat' do
     # Pods for testing
   end
 
+  pod 'Firebase'
   # Основная библиотека MapKit.
   pod ‘YandexMapKit’, ’3.4’ 
   # Дополнительные модули MapKit.
@@ -24,6 +22,8 @@ target 'Show-me-chat' do
   pod ‘YandexMapKitDirections’, ’3.4’ 
   pod ‘YandexMapKitPlaces’, ’3.4’ 
   pod ‘YandexMapKitSearch’, ’3.4’ 
-  pod ‘YandexMapKitTransport’, ’3.4’ 
+  pod ‘YandexMapKitTransport’, ’3.4’
+  pod ‘FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
 
 end
