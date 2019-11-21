@@ -15,6 +15,8 @@ target 'Show-me-chat' do
   end
 
   pod 'Firebase'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
   # Основная библиотека MapKit.
   pod ‘YandexMapKit’, ’3.4’ 
   # Дополнительные модули MapKit.
@@ -25,5 +27,6 @@ target 'Show-me-chat' do
   pod ‘YandexMapKitTransport’, ’3.4’
   pod ‘FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
+  pod 'JSQMessagesViewController'
 
 end

@@ -140,5 +140,19 @@
             </objects>
             <point key="canvasLocation" x="20" y="14"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Niu-nP-ikc">
+            <objects>
+                <viewController storyboardIdentifier="Chat" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cOR-Bg-2xs" customClass="ChatViewController" customModule="Show_me_chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogc-tL-C2k">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YwO-QN-1MH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqq-8n-ImC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
 </document>
