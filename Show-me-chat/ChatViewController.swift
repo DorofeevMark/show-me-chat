@@ -34,7 +34,7 @@ class ChatViewController: JSQMessagesViewController {
         else
         {
             senderId = String(arc4random_uniform(999999))
-            senderDisplayName = ""
+            senderDisplayName = randomString(length: 5);
             
             defaults.set(senderId, forKey: "jsq_id")
             defaults.synchronize()
@@ -140,5 +140,10 @@ class ChatViewController: JSQMessagesViewController {
         ref.setValue(message)
         
         finishSendingMessage()
+    }
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
     }
 }
