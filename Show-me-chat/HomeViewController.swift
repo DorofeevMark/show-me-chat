@@ -21,7 +21,7 @@ class HomeViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstViewController = ChatViewController()
+        let firstViewController = ViewController()
 
         firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
