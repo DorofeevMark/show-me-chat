@@ -16,19 +16,18 @@ class ViewController: UIViewController{
 
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+         super.viewDidLoad()
         
                 
         // Do any additional setup after loading the view.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 10, longitude: 10, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
 
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        let position = CLLocationCoordinate2D(latitude: 10, longitude: 10)
+        let marker = GMSMarker(position: position)
+        marker.title = "Hello World"
         marker.map = mapView
        
     }

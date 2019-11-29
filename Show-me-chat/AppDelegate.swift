@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyAq2zxCLB4dlQgvK6eqMvs3pjDpZ1Sc-60")
+        GMSServices.provideAPIKey(Constants.API.mapApi)
         FirebaseApp.configure()
 
         return true
