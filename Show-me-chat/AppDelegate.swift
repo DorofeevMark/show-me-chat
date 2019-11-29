@@ -16,13 +16,37 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var navController: UINavigationController?
+    var handle: AuthStateDidChangeListenerHandle?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey(Constants.API.mapApi)
         FirebaseApp.configure()
 
-        return true
+        navController = UINavigationController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.makeKeyAndVisible()
+        observeAuthorisedState()
+        
+        return false
+    }
+    
+    private func observeAuthorisedState() {
+        self.setupRootViewController(
+            viewController: navController!)
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user == nil {
+                self.navController!.pushViewController(LoginViewController(), animated: false)
+            } else {
+                self.navController!.pushViewController(HomeViewController(), animated: false)
+            }
+        }
+    }
+    
+    private func setupRootViewController(viewController: UIViewController) {
+        self.window!.rootViewController = viewController
+        self.window!.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

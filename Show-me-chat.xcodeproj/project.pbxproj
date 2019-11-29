@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05C8A65B20FE8E817ACFE55F /* Pods_Show_me_chatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */; };
+		3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F083A2391392D00E202DB /* HomeViewController.swift */; };
+		3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */; };
 		3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8B2333F5D3005D401F /* AppDelegate.swift */; };
 		3D542D8E2333F5D3005D401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* ViewController.swift */; };
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
@@ -15,8 +17,6 @@
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
 		3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */; };
 		3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B79237DE46B00B61093 /* Constants.swift */; };
-		445070E4238FBB61004AD9A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */; };
-		CE8BB5932359BB99001862CD /* RootViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5922359BB99001862CD /* RootViewController .swift */; };
 		CE8BB5952359BD75001862CD /* LoginNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginNewController.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		FA3988C6269018BA47FED174 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */; };
@@ -34,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2BDAE595D5F7AD8A4E427EEB /* Pods-Show-me-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.release.xcconfig"; sourceTree = "<group>"; };
+		3D1F083A2391392D00E202DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D542D882333F5D3005D401F /* Show-me-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show-me-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542D8B2333F5D3005D401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D542D8D2333F5D3005D401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
-		CE8BB5922359BB99001862CD /* RootViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootViewController .swift"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNewController.swift; sourceTree = "<group>"; };
 		CEDB8FA4234CA2D300A7D8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D87D6773D0E1038A1E737C42 /* Pods-Show-me-chatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chatTests.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chatTests/Pods-Show-me-chatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,10 +117,10 @@
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
-				CE8BB5922359BB99001862CD /* RootViewController .swift */,
 				CE8BB5942359BD75001862CD /* LoginNewController.swift */,
 				3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */,
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
+				3D1F083A2391392D00E202DB /* HomeViewController.swift */,
 			);
 			path = "Show-me-chat";
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 			files = (
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
 				3D542D962333F5D5005D401F /* Assets.xcassets in Resources */,
-				445070E4238FBB61004AD9A6 /* GoogleService-Info.plist in Resources */,
+				3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,9 +333,9 @@
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
 				3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */,
+				3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */,
 				3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */,
 				CE8BB5952359BD75001862CD /* LoginNewController.swift in Sources */,
-				CE8BB5932359BB99001862CD /* RootViewController .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
