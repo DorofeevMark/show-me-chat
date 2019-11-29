@@ -15,37 +15,13 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var navController: UINavigationController?
-    var handle: AuthStateDidChangeListenerHandle?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         YMKMapKit.setApiKey("ebb07ebe-291f-49ab-9313-6b5007940874аа")
         FirebaseApp.configure()
 
-        navController = UINavigationController()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.makeKeyAndVisible()
-        observeAuthorisedState()
-        
-        return false
-    }
-    
-    private func observeAuthorisedState() {
-        self.setupRootViewController(
-            viewController: navController!)
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user == nil {
-                self.navController!.pushViewController(LoginViewController(), animated: false)
-            } else {
-                self.navController!.pushViewController(HomeViewController(), animated: false)
-            }
-        }
-    }
-    
-    private func setupRootViewController(viewController: UIViewController) {
-        self.window!.rootViewController = viewController
-        self.window!.makeKeyAndVisible()
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
