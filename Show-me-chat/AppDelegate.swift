@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
-import YandexMapKit
 import Firebase
+import GoogleMaps
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        YMKMapKit.setApiKey("ebb07ebe-291f-49ab-9313-6b5007940874аа")
+        GMSServices.provideAPIKey(Constants.API.mapApi)
         FirebaseApp.configure()
 
         return true

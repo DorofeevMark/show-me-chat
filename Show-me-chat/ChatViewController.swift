@@ -2,8 +2,8 @@
 //  ChatViewController.swift
 //  Show-me-chat
 //
-//  Created by Mark Dorofeev on 14/11/2019.
-//  Copyright © 2019 Mark Dorofeev. All rights reserved.
+//  Created by Mark Dorofeev, Anton Brichev on 14/11/2019.
+//  Copyright © 2019 Anton Brichev, Mark Dorofeev. All rights reserved.
 //
 
 import UIKit
@@ -12,12 +12,17 @@ import JSQMessagesViewController
 class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
 
+    
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleBlue())
+        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleGreen())
     }()
     
+    
+    
+
+    
     lazy var incomingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleLightGray())
+        return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleGreen())
     }()
 
     override func viewDidLoad() {
@@ -146,4 +151,4 @@ class ChatViewController: JSQMessagesViewController {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
-}
+ }
