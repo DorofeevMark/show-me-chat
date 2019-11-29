@@ -10,16 +10,15 @@ import Foundation
 import UIKit
 import FirebaseUI
 
-class LoginController: UIViewController, FUIAuthDelegate{
+class LoginViewController: UIViewController, FUIAuthDelegate{
     override func viewDidAppear(_ animated: Bool) {
     
         super.viewDidAppear(animated)
-        
+        FUIAuth.defaultAuthUI()?.shouldHideCancelButton = true
         let authUI = FUIAuth.defaultAuthUI()
         
         authUI?.delegate = self
-        let providers: [FUIAuthProvider] = [
-            FUIGoogleAuth()]
+        let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
 
         authUI?.providers = providers
         let authViewController = authUI!.authViewController()
@@ -27,14 +26,6 @@ class LoginController: UIViewController, FUIAuthDelegate{
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-         self.authSuccess()
+//        self.authSuccess()
     }
-    
-    func authSuccess() {
-        self.dismiss(animated: true, completion: nil)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "Map")
-        self.present(loggedInViewController, animated: true, completion: nil)
-    }
-    
 }
