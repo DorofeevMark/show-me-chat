@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05C8A65B20FE8E817ACFE55F /* Pods_Show_me_chatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */; };
-		3D0CCFE5237C875000492A38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D0CCFE4237C874F00492A38 /* GoogleService-Info.plist */; };
 		3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8B2333F5D3005D401F /* AppDelegate.swift */; };
 		3D542D8E2333F5D3005D401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* ViewController.swift */; };
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
@@ -16,6 +15,7 @@
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
 		3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */; };
 		3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B79237DE46B00B61093 /* Constants.swift */; };
+		445070E4238FBB61004AD9A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */; };
 		CE8BB5932359BB99001862CD /* RootViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5922359BB99001862CD /* RootViewController .swift */; };
 		CE8BB5952359BD75001862CD /* LoginNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginNewController.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
@@ -34,13 +34,12 @@
 
 /* Begin PBXFileReference section */
 		2BDAE595D5F7AD8A4E427EEB /* Pods-Show-me-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.release.xcconfig"; sourceTree = "<group>"; };
-		3D0CCFE4237C874F00492A38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D542D882333F5D3005D401F /* Show-me-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show-me-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542D8B2333F5D3005D401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D542D8D2333F5D3005D401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D542D932333F5D3005D401F /* Show_me_chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Show_me_chat.xcdatamodel; sourceTree = "<group>"; };
 		3D542D952333F5D5005D401F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3D542D9A2333F5D5005D401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D542D9F2333F5D5005D401F /* Show-me-chatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Show-me-chatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_me_chatTests.swift; sourceTree = "<group>"; };
 		3D542DA52333F5D5005D401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,11 +111,10 @@
 		3D542D8A2333F5D3005D401F /* Show-me-chat */ = {
 			isa = PBXGroup;
 			children = (
-				3D0CCFE4237C874F00492A38 /* GoogleService-Info.plist */,
 				3D542D8B2333F5D3005D401F /* AppDelegate.swift */,
 				3D542D8D2333F5D3005D401F /* ViewController.swift */,
 				3D542D952333F5D5005D401F /* Assets.xcassets */,
-				3D542D9A2333F5D5005D401F /* Info.plist */,
+				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
 				CE8BB5922359BB99001862CD /* RootViewController .swift */,
@@ -232,7 +230,7 @@
 			files = (
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
 				3D542D962333F5D5005D401F /* Assets.xcassets in Resources */,
-				3D0CCFE5237C875000492A38 /* GoogleService-Info.plist in Resources */,
+				445070E4238FBB61004AD9A6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

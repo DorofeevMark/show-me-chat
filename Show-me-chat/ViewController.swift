@@ -8,19 +8,28 @@
 //
 
 import UIKit
-import YandexMapKit
+import GoogleMaps
+
 
 class ViewController: UIViewController{
 
-   
-    @IBOutlet weak var mapView: YMKMapView! //Yandex map
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+                
         // Do any additional setup after loading the view.
-        mapView.mapWindow.map.move(
-        with: YMKCameraPosition.init(target: YMKPoint(latitude: 59.9558213, longitude: 30.3209282), zoom: 15, azimuth: 0, tilt: 0),
-        animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 5),
-        cameraCallback: nil)
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+       
     }
 }

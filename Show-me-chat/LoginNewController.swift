@@ -12,9 +12,11 @@ import FirebaseUI
 
 class LoginController: UIViewController, FUIAuthDelegate{
     override func viewDidAppear(_ animated: Bool) {
+    
         super.viewDidAppear(animated)
-
+        
         let authUI = FUIAuth.defaultAuthUI()
+        
         authUI?.delegate = self
         let providers: [FUIAuthProvider] = [
             FUIGoogleAuth()]
@@ -25,7 +27,7 @@ class LoginController: UIViewController, FUIAuthDelegate{
     }
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-        self.authSuccess()
+         self.authSuccess()
     }
     
     func authSuccess() {
