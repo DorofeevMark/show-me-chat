@@ -39,7 +39,7 @@ class ChatViewController: JSQMessagesViewController {
         else
         {
             senderId = String(arc4random_uniform(999999))
-            senderDisplayName = "Tony"
+            senderDisplayName = randomString(length: 5);
             
             defaults.set(senderId, forKey: "jsq_id")
             defaults.synchronize()
