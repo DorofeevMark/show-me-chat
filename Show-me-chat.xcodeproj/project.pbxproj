@@ -11,7 +11,7 @@
 		3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F083A2391392D00E202DB /* HomeViewController.swift */; };
 		3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */; };
 		3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8B2333F5D3005D401F /* AppDelegate.swift */; };
-		3D542D8E2333F5D3005D401F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* ViewController.swift */; };
+		3D542D8E2333F5D3005D401F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* MapViewController.swift */; };
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
 		3D542D962333F5D5005D401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D952333F5D5005D401F /* Assets.xcassets */; };
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
@@ -37,7 +37,7 @@
 		3D1F083A2391392D00E202DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D542D882333F5D3005D401F /* Show-me-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show-me-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542D8B2333F5D3005D401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D542D8D2333F5D3005D401F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D542D8D2333F5D3005D401F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3D542D932333F5D3005D401F /* Show_me_chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Show_me_chat.xcdatamodel; sourceTree = "<group>"; };
 		3D542D952333F5D5005D401F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				3D542D8B2333F5D3005D401F /* AppDelegate.swift */,
-				3D542D8D2333F5D3005D401F /* ViewController.swift */,
 				3D542D952333F5D5005D401F /* Assets.xcassets */,
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
@@ -120,6 +119,7 @@
 				CE8BB5942359BD75001862CD /* LoginNewController.swift */,
 				3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */,
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
+				3D542D8D2333F5D3005D401F /* MapViewController.swift */,
 				3D1F083A2391392D00E202DB /* HomeViewController.swift */,
 			);
 			path = "Show-me-chat";
@@ -329,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D542D8E2333F5D3005D401F /* ViewController.swift in Sources */,
+				3D542D8E2333F5D3005D401F /* MapViewController.swift in Sources */,
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
 				3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */,

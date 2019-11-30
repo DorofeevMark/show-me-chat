@@ -11,24 +11,34 @@ import UIKit
 import GoogleMaps
 
 
-class ViewController: UIViewController{
+class MapViewController: UIViewController, GMSMapViewDelegate{
 
 
 
-    override func viewDidLoad() {
-         super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+    
+        super.viewDidAppear(animated)
         
                 
         // Do any additional setup after loading the view.
         let camera = GMSCameraPosition.camera(withLatitude: 10, longitude: 10, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
-
-        // Creates a marker in the center of the map.
+        // Creates a marker
         let position = CLLocationCoordinate2D(latitude: 10, longitude: 10)
         let marker = GMSMarker(position: position)
-        marker.title = "Hello World"
+        marker.title = "Сдача лаб по башу"
+        marker.snippet = "в чате 24 человека"
         marker.map = mapView
+        
+        mapView.delegate = self
+        
+        func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
+                  print("work?")
+                  return true
+            }
+
        
     }
+   
 }
