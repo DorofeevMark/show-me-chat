@@ -32,13 +32,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         marker.map = mapView
         
         mapView.delegate = self
-        
-        func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
-                  print("work?")
-                  return true
-            }
-
        
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print(marker)
+        return true
     }
    
 }
