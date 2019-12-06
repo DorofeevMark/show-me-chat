@@ -17,7 +17,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var mapView: GMSMapView!
     var zoomLevel: Float = 15.0
 
-    var customInfoWindow : InfoWindow?
+    var customInfoWindow : CustomInfoWindow?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
@@ -40,10 +41,17 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         marker.map = mapView
     
         mapView.delegate = self
+        self.customInfoWindow = CustomInfoWindow.instanceFromNib()
     }
         
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print("clicked")
         return false
+    }
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        print("window")
+        return self.customInfoWindow
     }
     
 }
@@ -56,16 +64,16 @@ extension MapViewController: CLLocationManagerDelegate {
         let location: CLLocation = locations.last!
         print("Location: \(location)")
         
-        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
-                                              longitude: location.coordinate.longitude,
-                                              zoom: zoomLevel)
-        
-        if mapView.isHidden {
-            mapView.isHidden = false
-            mapView.camera = camera
-        } else {
-            mapView.animate(to: camera)
-        }
+//        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+//                                              longitude: location.coordinate.longitude,
+//                                              zoom: zoomLevel)
+//
+//        if mapView.isHidden {
+//            mapView.isHidden = false
+//            mapView.camera = camera
+//        } else {
+//            mapView.animate(to: camera)
+//        }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

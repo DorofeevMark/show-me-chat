@@ -17,8 +17,8 @@
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
 		3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */; };
 		3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B79237DE46B00B61093 /* Constants.swift */; };
-		4467061923998CEA00755374 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4467061823998CEA00755374 /* View.xib */; };
-		4467061D23998E7200755374 /* InfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4467061C23998E7200755374 /* InfoWindow.swift */; };
+		3DB998CD239A4BD0003695A6 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4467061823998CEA00755374 /* CustomInfoWindow.xib */; };
+		3DD3BB2F239A40C4005A430F /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */; };
 		CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginViewController.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		FA3988C6269018BA47FED174 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */; };
@@ -49,10 +49,10 @@
 		3DAE5B72237DD0DD00B61093 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3DAE5B79237DE46B00B61093 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		3DDFC3A823999B7700A9F433 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Show-me-chat/Info.plist"; sourceTree = SOURCE_ROOT; };
 		42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4467061823998CEA00755374 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
-		4467061C23998E7200755374 /* InfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoWindow.swift; path = "/Users/antonbrichev/Documents/settings_screen/show-me-chat/Show-me-chat/InfoWindow.swift"; sourceTree = "<absolute>"; };
+		4467061823998CEA00755374 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
 		4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,14 +116,13 @@
 		3D542D8A2333F5D3005D401F /* Show-me-chat */ = {
 			isa = PBXGroup;
 			children = (
+				3DD3BB30239A4A9C005A430F /* Views */,
 				3DDFC3A823999B7700A9F433 /* Info.plist */,
 				3D542D8B2333F5D3005D401F /* AppDelegate.swift */,
 				3D542D952333F5D5005D401F /* Assets.xcassets */,
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
-				4467061823998CEA00755374 /* View.xib */,
-				4467061C23998E7200755374 /* InfoWindow.swift */,
 				CE8BB5942359BD75001862CD /* LoginViewController.swift */,
 				3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */,
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
@@ -140,6 +139,15 @@
 				3D542DA52333F5D5005D401F /* Info.plist */,
 			);
 			path = "Show-me-chatTests";
+			sourceTree = "<group>";
+		};
+		3DD3BB30239A4A9C005A430F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4467061823998CEA00755374 /* CustomInfoWindow.xib */,
+				3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4BFAEBCEEAB248F3BFC73C2A /* Frameworks */ = {
@@ -236,7 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4467061923998CEA00755374 /* View.xib in Resources */,
+				3DB998CD239A4BD0003695A6 /* CustomInfoWindow.xib in Resources */,
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
 				3D542D962333F5D5005D401F /* Assets.xcassets in Resources */,
 				3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */,
@@ -342,10 +350,10 @@
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
 				3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */,
+				3DD3BB2F239A40C4005A430F /* CustomInfoWindow.swift in Sources */,
 				3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */,
 				3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */,
 				CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */,
-				4467061D23998E7200755374 /* InfoWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
