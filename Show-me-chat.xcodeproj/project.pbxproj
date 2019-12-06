@@ -17,6 +17,8 @@
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
 		3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */; };
 		3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B79237DE46B00B61093 /* Constants.swift */; };
+		4467061923998CEA00755374 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4467061823998CEA00755374 /* View.xib */; };
+		4467061D23998E7200755374 /* InfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4467061C23998E7200755374 /* InfoWindow.swift */; };
 		CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginViewController.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		FA3988C6269018BA47FED174 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */; };
@@ -48,6 +50,8 @@
 		3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3DAE5B79237DE46B00B61093 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4467061823998CEA00755374 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		4467061C23998E7200755374 /* InfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoWindow.swift; path = "/Users/antonbrichev/Documents/settings_screen/show-me-chat/Show-me-chat/InfoWindow.swift"; sourceTree = "<absolute>"; };
 		4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
+				4467061823998CEA00755374 /* View.xib */,
+				4467061C23998E7200755374 /* InfoWindow.swift */,
 				CE8BB5942359BD75001862CD /* LoginViewController.swift */,
 				3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */,
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
@@ -228,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4467061923998CEA00755374 /* View.xib in Resources */,
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
 				3D542D962333F5D5005D401F /* Assets.xcassets in Resources */,
 				3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */,
@@ -336,6 +343,7 @@
 				3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */,
 				3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */,
 				CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */,
+				4467061D23998E7200755374 /* InfoWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/antonbrichev/Documents/settings_screen/show-me-chat/Show-me-chat/InfoWindow.swift">
+   </FileRef>
+   <FileRef
       location = "group:Show-me-chat.xcodeproj">
    </FileRef>
    <FileRef
