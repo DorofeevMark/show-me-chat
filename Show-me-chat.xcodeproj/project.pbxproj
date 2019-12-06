@@ -45,10 +45,11 @@
 		3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D542D9F2333F5D5005D401F /* Show-me-chatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Show-me-chatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_me_chatTests.swift; sourceTree = "<group>"; };
-		3D542DA52333F5D5005D401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D542DA52333F5D5005D401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Show-me-chatTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		3DAE5B72237DD0DD00B61093 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3DAE5B79237DE46B00B61093 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3DDFC3A823999B7700A9F433 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Show-me-chat/Info.plist"; sourceTree = SOURCE_ROOT; };
 		42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4467061823998CEA00755374 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		4467061C23998E7200755374 /* InfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoWindow.swift; path = "/Users/antonbrichev/Documents/settings_screen/show-me-chat/Show-me-chat/InfoWindow.swift"; sourceTree = "<absolute>"; };
@@ -115,6 +116,7 @@
 		3D542D8A2333F5D3005D401F /* Show-me-chat */ = {
 			isa = PBXGroup;
 			children = (
+				3DDFC3A823999B7700A9F433 /* Info.plist */,
 				3D542D8B2333F5D3005D401F /* AppDelegate.swift */,
 				3D542D952333F5D5005D401F /* Assets.xcassets */,
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
