@@ -28,7 +28,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
         let camera = GMSCameraPosition.camera(withLatitude: 10, longitude: 10, zoom: zoomLevel)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.settings.myLocationButton = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
