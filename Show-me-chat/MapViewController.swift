@@ -39,20 +39,29 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let marker = GMSMarker(position: position)
 
         marker.map = mapView
+     
     
         mapView.delegate = self
-        self.customInfoWindow = CustomInfoWindow.instanceFromNib()
+       // self.customInfoWindow = CustomInfoWindow.instanceFromNib()
     }
+    
+    let temp = CustomInfoWindow(frame: CGRect(x: 0, y: 0, width: 600, height: 200))
         
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print("clicked")
+        self.view.addSubview(temp)
         return false
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         print("window")
-        return self.customInfoWindow
+        return UIView();
     }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        temp.removeFromSuperview()
+    }
+    
     
 }
 
