@@ -40,15 +40,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
         marker.map = mapView
      
-    
         mapView.delegate = self
-       // self.customInfoWindow = CustomInfoWindow.instanceFromNib()
+      
     }
+
+
+    let temp = CustomInfoWindow(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
     
-    let temp = CustomInfoWindow(frame: CGRect(x: 0, y: 0, width: 600, height: 200))
-        
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         print("clicked")
+        mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
         self.view.addSubview(temp)
         return false
     }
@@ -59,6 +60,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        temp.removeFromSuperview()
+    }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         temp.removeFromSuperview()
     }
     

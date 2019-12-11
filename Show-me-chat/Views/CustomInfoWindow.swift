@@ -12,7 +12,7 @@ class CustomInfoWindow: UIView {
 
  
     @IBAction func push(_ sender: UIButton) {
-        print("button pressed")
+         
     }
     
     override init(frame: CGRect) {
