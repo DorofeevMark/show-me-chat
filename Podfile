@@ -16,7 +16,7 @@ target 'Show-me-chat' do
 
   pod 'Firebase'
   pod 'Firebase/Storage'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod ‘FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
   pod 'JSQMessagesViewController'
