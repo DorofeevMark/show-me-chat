@@ -11,7 +11,7 @@ import UIKit
 import FirebaseUI
 
 class LoginViewController: UIViewController, FUIAuthDelegate{
-    override func viewDidAppear(_ animated: Bool) {
+        override func viewDidAppear(_ animated: Bool) {
     
         super.viewDidAppear(animated)
         FUIAuth.defaultAuthUI()?.shouldHideCancelButton = true
@@ -28,4 +28,5 @@ class LoginViewController: UIViewController, FUIAuthDelegate{
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
 //        self.authSuccess()
     }
+ 
 }

@@ -21,7 +21,8 @@ class HomeViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstViewController = ViewController()
+
+        let firstViewController = MapViewController()
 
         firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
