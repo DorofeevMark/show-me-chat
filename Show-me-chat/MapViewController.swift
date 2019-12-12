@@ -23,8 +23,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var is_creating = false
     var customInfoWindow : CustomInfoWindow?
     var temp : CustomInfoWindow!
+    var documentID : String = ""
+    var navController: UINavigationController?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager = CLLocationManager()
@@ -55,6 +56,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                         let coord = document.data()["coordinates"] as! GeoPoint
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude ))
                         marker.map = self.mapView
+                        marker.userData = document.documentID
+
                     }
                 }
         }
@@ -70,7 +73,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
-        temp.button_.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        self.documentID = marker.userData as! String
+        temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
         self.view.addSubview(temp)
         return false
     }
@@ -84,12 +88,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
 
     
+    
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         temp.removeFromSuperview()
     }
     
     @objc func buttonTapped(_ sender: UIButton!) {
-      print("Yeah! Button is tapped!")
+        print(self.documentID)
+        ChatViewController().view
+        
     }
     
     
