@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Firebase
 
 class HomeViewController: UITabBarController {
     
@@ -35,24 +34,9 @@ class HomeViewController: UITabBarController {
         
         self.viewControllers = tabBarList
         
-        navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
+//        navigationItem.hidesBackButton = true
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
     }
-    
-    @objc func addTapped() {
-        do {
-            try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            // Show error message
-        }
-    }
-    
-    @objc func createChat(){
-        
-    }
-    
-    
-    
     
 }

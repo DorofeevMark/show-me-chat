@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         navController = UINavigationController()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.makeKeyAndVisible()
         observeAuthorisedState()
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if user == nil {
                 self.navController!.pushViewController(LoginViewController(), animated: false)
             } else {
-                self.navController!.pushViewController(HomeViewController(), animated: false)
+                self.navController!.pushViewController(MapViewController(), animated: false)
             }
         }
     }
