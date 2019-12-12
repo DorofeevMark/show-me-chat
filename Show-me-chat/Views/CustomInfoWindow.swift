@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 
 class CustomInfoWindow: UIView {
 
- 
-    @IBAction func push(_ sender: UIButton) {
-         
+    
+   
+    @IBOutlet weak var button_: UIButton!
+    
+    override func awakeFromNib(){
+        super.awakeFromNib()
+        button_.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame : frame);
@@ -30,9 +38,13 @@ class CustomInfoWindow: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         self.addSubview(view);
 
     }
-
+    
+    @objc func buttonTapped(_ sender: UIButton!) {
+         print("Yeah! Button is tapped!")
+       }
 
 }

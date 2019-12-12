@@ -32,10 +32,12 @@ class HomeViewController: UITabBarController {
         
         let tabBarList = [firstViewController, secondViewController]
         
+        
         self.viewControllers = tabBarList
         
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
     }
     
     @objc func addTapped() {
@@ -45,5 +47,12 @@ class HomeViewController: UITabBarController {
             // Show error message
         }
     }
+    
+    @objc func createChat(){
+        
+    }
+    
+    
+    
     
 }

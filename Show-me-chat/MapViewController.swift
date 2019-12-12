@@ -4,20 +4,25 @@
 //  Show-me-chat
 //
 //  Created by Anton Brichev, Oleg Krylov, Mark Dorofeev on 19/09/2019.
-//  Copyright © 2019 Mark Dorofeev. All rights reserved.
+//  Copyright © 2019 Anton Brichev, Oleg Krylov, Mark Dorofeev. All rights reserved.
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 import GoogleMaps
 
 
-class MapViewController: UIViewController, GMSMapViewDelegate {
+class MapViewController: UIViewController, GMSMapViewDelegate{
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
     var zoomLevel: Float = 15.0
-
+    var db : Firestore!
+    var is_creating = false
     var customInfoWindow : CustomInfoWindow?
+    var temp :  CustomInfoWindow!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +32,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-
+        
+       
         let camera = GMSCameraPosition.camera(withLatitude: 10, longitude: 10, zoom: zoomLevel)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -35,37 +41,59 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         
         view = mapView
         
-        let position = CLLocationCoordinate2D(latitude: 10, longitude: 10)
-        let marker = GMSMarker(position: position)
-
-        marker.map = mapView
-     
+        db = Firestore.firestore()
+        
+        db.collection("chats")
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching messages: \(error!)")
+                    return
+                }
+                for document in documents {
+                    if((document.data()["isActive"]) != nil){
+                        let coord = document.data()["coordinates"] as! GeoPoint
+                        let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude ))
+                        marker.map = self.mapView
+                    }
+                }
+        }
+        
+        
+        
+        self.temp = CustomInfoWindow(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+        
         mapView.delegate = self
       
     }
+    
 
-
-    let temp = CustomInfoWindow(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+   
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        print("clicked")
         mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
         self.view.addSubview(temp)
+        temp.button_.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         return false
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        print("window")
         return UIView();
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         temp.removeFromSuperview()
     }
+
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         temp.removeFromSuperview()
     }
+    
+    @objc func buttonTapped(_ sender: UIButton!) {
+      print("Yeah! Button is tapped!")
+    }
+    
+    
     
     
 }

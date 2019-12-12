@@ -25,15 +25,15 @@
                     <rect key="frame" x="74" y="129" width="52" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Кнопка"/>
-                    <connections>
-                        <action selector="push:" destination="iN0-l3-epB" eventType="touchUpInside" id="XVs-xJ-lwP"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="19" y="213"/>
+            <connections>
+                <outlet property="button_" destination="uYT-be-ftw" id="zGh-ks-b7i"/>
+            </connections>
+            <point key="canvasLocation" x="18.840579710144929" y="212.94642857142856"/>
         </view>
     </objects>
 </document>
