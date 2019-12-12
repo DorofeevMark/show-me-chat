@@ -21,7 +21,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var db : Firestore!
     var is_creating = false
     var customInfoWindow : CustomInfoWindow?
-    var temp :  CustomInfoWindow!
+    var temp : CustomInfoWindow!
     
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         locationManager.delegate = self
         
        
-        let camera = GMSCameraPosition.camera(withLatitude: 10, longitude: 10, zoom: zoomLevel)
+        let camera = GMSCameraPosition.camera(withLatitude: 12, longitude: 12, zoom: zoomLevel)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
@@ -57,10 +57,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                     }
                 }
         }
-        
-        
-        
-        self.temp = CustomInfoWindow(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+    
+        self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
         mapView.delegate = self
       
@@ -71,8 +69,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
-        self.view.addSubview(temp)
         temp.button_.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        self.view.addSubview(temp)
         return false
     }
     
