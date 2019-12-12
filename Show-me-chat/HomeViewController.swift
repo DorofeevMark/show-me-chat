@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class HomeViewController: UITabBarController {
     
@@ -21,22 +22,21 @@ class HomeViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let firstViewController = MapViewController()
-
-        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
-        let secondViewController = ChatViewController()
-        
-        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
-        
-        let tabBarList = [firstViewController, secondViewController]
-        
-        
-        self.viewControllers = tabBarList
+//        let firstViewController = MapViewController()
+//
+//        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+//        
+//        let secondViewController = ChatViewController()
+//        
+//        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+//        
+//        let tabBarList = [firstViewController, secondViewController]
+//        
+//        
+//        self.viewControllers = tabBarList
         
 //        navigationItem.hidesBackButton = true
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
 //        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
     }
-    
 }

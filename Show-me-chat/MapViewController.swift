@@ -24,7 +24,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var customInfoWindow : CustomInfoWindow?
     var temp : CustomInfoWindow!
     var documentID : String = ""
-    var navController: UINavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +64,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
         mapView.delegate = self
+        
+        navigationItem.hidesBackButton = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
+        
       
     }
     
@@ -95,12 +99,20 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     @objc func buttonTapped(_ sender: UIButton!) {
         print(self.documentID)
-        ChatViewController().view
-        
+        self.navigationController?.pushViewController(ChatViewController(chatId: self.documentID), animated: false)
     }
     
+    @objc func addTapped() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            // Show error message
+        }
+    }
     
-    
+    @objc func createChat(){
+        
+    }
     
 }
 
