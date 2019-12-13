@@ -7,32 +7,22 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 
 class CustomInfoWindow: UIView {
 
- 
-    @IBAction func push(_ sender: UIButton) {
-        print("button pressed")
-    }
+    @IBOutlet var view: UIView!
+    @IBOutlet weak var button_: UIButton!
     
-    override init(frame: CGRect) {
-        super.init(frame : frame);
-        loadViewFromNib()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func loadViewFromNib() {
+    func loadViewFromNib(frame: CGRect) -> CustomInfoWindow {
+        print("loadViewFromNib")
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CustomInfoWindow", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = bounds
+        view = nib.instantiate(withOwner: self, options: nil).first as! CustomInfoWindow
+        view.frame = frame
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(view);
 
+        return view as! CustomInfoWindow;
     }
-
-
 }

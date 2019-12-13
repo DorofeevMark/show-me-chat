@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         navController = UINavigationController()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.makeKeyAndVisible()
         observeAuthorisedState()
@@ -34,18 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func observeAuthorisedState() {
         self.setupRootViewController(
-            viewController: navController!)
+            navController: navController!)
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user == nil {
                 self.navController!.pushViewController(LoginViewController(), animated: false)
             } else {
-                self.navController!.pushViewController(HomeViewController(), animated: false)
+                self.navController!.pushViewController(MapViewController(), animated: false)
             }
         }
     }
     
-    private func setupRootViewController(viewController: UIViewController) {
-        self.window!.rootViewController = viewController
+    private func setupRootViewController(navController: UIViewController) {
+        self.window!.rootViewController = navController
         self.window!.makeKeyAndVisible()
     }
 

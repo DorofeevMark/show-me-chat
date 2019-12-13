@@ -14,18 +14,20 @@ import FirebaseFirestore
 class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var db: Firestore!
+    var chatId: String = ""
     
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.jsq_messageBubbleGreen())
     }()
     
-    
-    
-
-    
     lazy var incomingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.jsq_messageBubbleGreen())
     }()
+    
+    convenience init(chatId: String){
+        self.init()
+        self.chatId = chatId
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,20 +57,20 @@ class ChatViewController: JSQMessagesViewController {
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        
-        db.collection("chats").document("DW8AyeNPQQuIhhXUfRUD").collection("messages")
+        db.collection("chats").document(self.chatId).collection("messages")
             .addSnapshotListener { querySnapshot, error in
-                guard let documents = querySnapshot?.documents else {
-                    print("Error fetching messages: \(error!)")
+                guard let snapshot = querySnapshot else {
+                    print("Error fetching snapshots: \(error!)")
                     return
                 }
-                for document in documents {
-                    print("Message \(document.documentID) => \(document.data())")
-                    if let message = JSQMessage(senderId: document.data()["senderId"] as? String, displayName: document.data()["senderId"] as? String, text: (document.data()["text"] as! String)) {
-                        self.messages.append(message)
-                        self.finishReceivingMessage()
-                    }
 
+                snapshot.documentChanges.forEach { diff in
+                    if (diff.type == .added) {
+                        if let message = JSQMessage(senderId: diff.document.data()["senderId"] as? String, displayName: diff.document.data()["senderId"] as? String, text: (diff.document.data()["text"] as! String)) {
+                            self.messages.append(message)
+                            self.finishReceivingMessage()
+                        }
+                    }
                 }
         }
     }
@@ -98,7 +100,7 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-    db.collection("chats").document("DW8AyeNPQQuIhhXUfRUD").collection("messages").document().setData([
+    db.collection("chats").document(self.chatId).collection("messages").document().setData([
             "senderId": senderId!,
             "text": text!
         ]) { err in
@@ -117,3 +119,5 @@ class ChatViewController: JSQMessagesViewController {
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
  }
+
+
