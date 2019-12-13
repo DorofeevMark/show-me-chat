@@ -33,6 +33,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
+        var markers = [GMSMarker]()
         
        
         let camera = GMSCameraPosition.camera(withLatitude: 12, longitude: 12, zoom: zoomLevel)
@@ -56,6 +57,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude ))
                         marker.map = self.mapView
                         marker.userData = document.documentID
+                        markers.append(marker)
 
                     }
                 }
