@@ -14,6 +14,11 @@ class CreatingWindow: UIView {
 
     @IBOutlet var view: UIView!    
     
+ 
+    @IBOutlet weak var buttonYes: UIButton!
+    
+    @IBOutlet weak var buttonNo: UIButton!
+    
     func loadViewFromNib(frame: CGRect) -> CreatingWindow {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CreatingWindow", bundle: bundle)
