@@ -21,9 +21,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var zoomLevel: Float = 15.0
     var db : Firestore!
     var is_creating = false
-    var customInfoWindow : CustomInfoWindow?
     var temp : CustomInfoWindow!
+    var creatingWindow : CreatingWindow!
     var documentID : String = ""
+    var markers = [GMSMarker]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-        var markers = [GMSMarker]()
+       
         
        
         let camera = GMSCameraPosition.camera(withLatitude: 12, longitude: 12, zoom: zoomLevel)
@@ -57,13 +58,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude ))
                         marker.map = self.mapView
                         marker.userData = document.documentID
-                        markers.append(marker)
+                        self.markers.append(marker)
 
                     }
                 }
         }
     
         self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+        
+       // self.creatingWindow = CreatingWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
         mapView.delegate = self
         
@@ -91,7 +94,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         temp.removeFromSuperview()
+        if(is_creating){
+            print(coordinate)
+            //let marker = GMSMarker(position: coordinate)
+            //marker.map = self.mapView
+            //marker.userData = document.documentID
+            //markers.append(marker)
+            is_creating = false
+        }
     }
+    
+
+
 
     
     
@@ -113,7 +127,14 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
     
     @objc func createChat(){
-        
+       /* temp.button_.addTarget(self, action: #selector(MapViewController.createButtonTapped(_:)), for: .touchUpInside)
+        self.view.addSubview(creatingWindow) */
+        is_creating = true
+    }
+    
+    @objc func createButtonTapped(_ sender: UIButton!) {
+        print("Успешно")
+        //creatingWindow.removeFromSuperview()
     }
     
 }
