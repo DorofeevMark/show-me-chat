@@ -67,9 +67,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                 }
         }
     
-        self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+        self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants_.ScreenParameters.width / 2 - 100 , y:  Constants_.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
-       self.creatingWindow = CreatingWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+       self.creatingWindow = CreatingWindow().loadViewFromNib(frame: CGRect(x: Constants_.ScreenParameters.width / 2 - 100 , y:  Constants_.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
         mapView.delegate = self
         

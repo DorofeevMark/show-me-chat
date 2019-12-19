@@ -18,8 +18,8 @@ target 'Show-me-chat' do
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
   pod ‘FirebaseUI/Auth'
-  pod 'FirebaseUI/Google'
   pod 'JSQMessagesViewController'
+  pod 'FirebaseUI/Google'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
 

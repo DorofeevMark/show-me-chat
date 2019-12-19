@@ -2,7 +2,7 @@
 //  Bridging-Header.h
 //  Show-me-chat
 //
-//  Created by Mark Dorofeev on 14/11/2019.
+//  Created by Антон Бричёв on 19.12.2019.
 //  Copyright © 2019 Mark Dorofeev. All rights reserved.
 //
 
