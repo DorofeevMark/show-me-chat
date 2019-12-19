@@ -140,21 +140,27 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     @objc func createButtonTappedYes(_ sender: UIButton!) {
         creatingWindow.removeFromSuperview()
-        let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/addChat?userId=XkVK5VOlgcf04BcxezjnCHHOztc2&"
-        let stringLat = String(coordinates.latitude)
-        let stringLong = String(coordinates.longitude)
-        let url = URL(string: url_ + "longitude=" +  stringLong + "&latitude=" + stringLat)!
-        print(url)
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else {return}
-            print(String(data: data, encoding: .utf8)!)
+        let user = Auth.auth().currentUser
+        if let user = user {
+           let userId = user.uid
+            let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/addChat?userId="
+            let stringId = String(userId)
+            let stringLat = String(coordinates.latitude)
+            let stringLong = String(coordinates.longitude)
+            let url = URL(string: url_ + stringId + "&longitude=" + stringLong + "&latitude=" + stringLat)!
+            
+            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                        guard let data = data else {return}
+                        print(String(data: data, encoding: .utf8)!)
+            }
+            task.resume()
+            marker.userData = stringId
+            self.markers.append(marker)
+            marker.map = nil
+            is_creating = false
         }
 
-        task.resume()
-        marker.userData = "XkVK5VOlgcf04BcxezjnCHHOztc2"
-        self.markers.append(marker)
-        marker.map = nil
-        is_creating = false
+       
     }
     
     @objc func createButtonTappedNo(_ sender: UIButton!) {
