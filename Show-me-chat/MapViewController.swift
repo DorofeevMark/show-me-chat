@@ -123,7 +123,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     @objc func buttonTapped(_ sender: UIButton!) {
         print(self.documentID)
-        self.navigationController?.pushViewController(ChatViewController(chatId: self.documentID), animated: false)
+//        self.navigationController?.pushViewController(ChatViewController(), animated: false)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChatWindow")
+        
+        self.present(controller, animated: true, completion: nil)
     }
     
     @objc func addTapped() {
