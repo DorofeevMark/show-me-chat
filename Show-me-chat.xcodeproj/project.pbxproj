@@ -16,9 +16,9 @@
 		3D2DB58B23ABC0B8000C5676 /* IncomingMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58823ABC0B8000C5676 /* IncomingMessageTableViewCell.swift */; };
 		3D2DB58E23ABC142000C5676 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58D23ABC142000C5676 /* CALayer+Extensions.swift */; };
 		3D2DB59623ABC2C4000C5676 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59523ABC2C4000C5676 /* Colors.swift */; };
-		3D2DB59A23ABC3EC000C5676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DB59923ABC3EC000C5676 /* Assets.xcassets */; };
 		3D2DB59D23ABCB2F000C5676 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59C23ABCB2F000C5676 /* ChatViewController.swift */; };
 		3D2DB59F23ABCE71000C5676 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59E23ABCE71000C5676 /* User.swift */; };
+		3D30D32923AC0236000A08BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D30D32823AC0236000A08BA /* Assets.xcassets */; };
 		3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8B2333F5D3005D401F /* AppDelegate.swift */; };
 		3D542D8E2333F5D3005D401F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* MapViewController.swift */; };
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
@@ -52,9 +52,9 @@
 		3D2DB58823ABC0B8000C5676 /* IncomingMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageTableViewCell.swift; sourceTree = "<group>"; };
 		3D2DB58D23ABC142000C5676 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 		3D2DB59523ABC2C4000C5676 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		3D2DB59923ABC3EC000C5676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/ios-chat-using-swift-start-here/CometChat/CometChat/Assets.xcassets"; sourceTree = "<group>"; };
 		3D2DB59C23ABCB2F000C5676 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3D2DB59E23ABCE71000C5676 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3D30D32823AC0236000A08BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D542D882333F5D3005D401F /* Show-me-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show-me-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542D8B2333F5D3005D401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D542D8D2333F5D3005D401F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
 				3D542D8D2333F5D3005D401F /* MapViewController.swift */,
 				3D1F083A2391392D00E202DB /* HomeViewController.swift */,
-				3D2DB59923ABC3EC000C5676 /* Assets.xcassets */,
+				3D30D32823AC0236000A08BA /* Assets.xcassets */,
 			);
 			path = "Show-me-chat";
 			sourceTree = "<group>";
@@ -311,9 +311,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D30D32923AC0236000A08BA /* Assets.xcassets in Resources */,
 				3DB998CD239A4BD0003695A6 /* CustomInfoWindow.xib in Resources */,
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
-				3D2DB59A23ABC3EC000C5676 /* Assets.xcassets in Resources */,
 				3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */,
 				447FDEAD23ABBF6400C17756 /* CreatingWindow.xib in Resources */,
 			);
