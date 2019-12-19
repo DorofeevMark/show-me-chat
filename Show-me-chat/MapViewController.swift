@@ -21,6 +21,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var zoomLevel: Float = 15.0
     var db : Firestore!
     var is_creating = false
+    var markerIsAlive = false
     var temp : CustomInfoWindow!
     var creatingWindow : CreatingWindow!
     var documentID : String = ""
@@ -100,18 +101,21 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
             creatingWindow.buttonYes.addTarget(self, action: #selector(MapViewController.createButtonTappedYes(_:)), for: .touchUpInside)
             creatingWindow.buttonNo.addTarget(self, action: #selector(MapViewController.createButtonTappedNo(_:)), for: .touchUpInside)
             self.view.addSubview(creatingWindow)
+            if(markerIsAlive){
+                marker.map = nil
+            }
             marker = GMSMarker(position: coordinate)
             marker.map = self.mapView
             coordinates = coordinate
-            //marker.userData = document.documentID
-            //markers.append(marker)
+            markerIsAlive = true
+                //marker.userData = document.documentID
+                //markers.append(marker)
+            
         }
     }
     
 
 
-
-    
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         temp.removeFromSuperview()
@@ -135,7 +139,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
     
     @objc func createButtonTappedYes(_ sender: UIButton!) {
-        print("Успешно")
         creatingWindow.removeFromSuperview()
         let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/addChat?userId=XkVK5VOlgcf04BcxezjnCHHOztc2&"
         let stringLat = String(coordinates.latitude)
@@ -155,7 +158,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
     
     @objc func createButtonTappedNo(_ sender: UIButton!) {
-        print("Отмена")
         marker.map = nil
         creatingWindow.removeFromSuperview()
     }
