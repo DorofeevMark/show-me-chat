@@ -18,12 +18,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
-    var zoomLevel: Float = 15.0
+    var zoomLevel: Float = 5.0
     var db : Firestore!
     var is_creating = false
-    var customInfoWindow : CustomInfoWindow?
+    var markerIsAlive = false
     var temp : CustomInfoWindow!
+    var creatingWindow : CreatingWindow!
     var documentID : String = ""
+    var markers = [GMSMarker]()
+    var marker: GMSMarker!
+    var coordinates: CLLocationCoordinate2D!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +37,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-        var markers = [GMSMarker]()
+        
         
        
         let camera = GMSCameraPosition.camera(withLatitude: 12, longitude: 12, zoom: zoomLevel)
@@ -57,13 +61,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
                         let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: coord.latitude, longitude: coord.longitude ))
                         marker.map = self.mapView
                         marker.userData = document.documentID
-                        markers.append(marker)
+                        self.markers.append(marker)
 
                     }
                 }
         }
     
-        self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants.ScreenParameters.width / 2 - 100 , y:  Constants.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+        self.temp = CustomInfoWindow().loadViewFromNib(frame: CGRect(x: Constants_.ScreenParameters.width / 2 - 100 , y:  Constants_.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
+        
+       self.creatingWindow = CreatingWindow().loadViewFromNib(frame: CGRect(x: Constants_.ScreenParameters.width / 2 - 100 , y:  Constants_.ScreenParameters.height / 2 - 250 , width: 200, height: 200))
         
         mapView.delegate = self
         
@@ -76,24 +82,46 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
 
    
-    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
-        self.documentID = marker.userData as! String
-        temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
-        self.view.addSubview(temp)
-        return false
+        if(!is_creating){
+        
+            mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
+            self.documentID = marker.userData as! String
+            temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
+            self.view.addSubview(temp)
+            return false
+        }
+        return true
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         return UIView();
     }
     
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        temp.removeFromSuperview()
-    }
+    
 
     
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        temp.removeFromSuperview()
+        if(is_creating){
+            mapView.settings.scrollGestures = false
+             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "X", style: .plain, target: self, action: #selector(stopCreating))
+            mapView.camera =  GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: mapView.camera.zoom)
+            creatingWindow.buttonYes.addTarget(self, action: #selector(MapViewController.createButtonTappedYes(_:)), for: .touchUpInside)
+            creatingWindow.buttonNo.addTarget(self, action: #selector(MapViewController.createButtonTappedNo(_:)), for: .touchUpInside)
+            self.view.addSubview(creatingWindow)
+            if(markerIsAlive){
+                marker.map = nil
+            }
+            marker = GMSMarker(position: coordinate)
+            marker.map = self.mapView
+            coordinates = coordinate
+            markerIsAlive = true
+            
+        }
+    }
+    
+
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         temp.removeFromSuperview()
@@ -117,7 +145,47 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
     
     @objc func createChat(){
-        
+        is_creating = true
+    }
+    
+    @objc func stopCreating(){
+        mapView.settings.scrollGestures = true
+        is_creating = false
+        creatingWindow.removeFromSuperview()
+        marker.map = nil
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
+    }
+    
+    @objc func createButtonTappedYes(_ sender: UIButton!) {
+        creatingWindow.removeFromSuperview()
+        let user = Auth.auth().currentUser
+        if let user = user {
+           let userId = user.uid
+            let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/addChat?userId="
+            let stringId = String(userId)
+            let stringLat = String(coordinates.latitude)
+            let stringLong = String(coordinates.longitude)
+            let url = URL(string: url_ + stringId + "&longitude=" + stringLong + "&latitude=" + stringLat)!
+            
+            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                        guard let data = data else {return}
+                        print(String(data: data, encoding: .utf8)!)
+            }
+            task.resume()
+            marker.userData = stringId
+            self.markers.append(marker)
+            marker.map = nil
+            is_creating = false
+            mapView.settings.scrollGestures = true
+        }
+
+       
+    }
+    
+    @objc func createButtonTappedNo(_ sender: UIButton!) {
+        mapView.settings.scrollGestures = true
+        marker.map = nil
+        creatingWindow.removeFromSuperview()
     }
     
 }
