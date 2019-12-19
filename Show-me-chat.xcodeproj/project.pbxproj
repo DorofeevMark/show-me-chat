@@ -10,12 +10,19 @@
 		05C8A65B20FE8E817ACFE55F /* Pods_Show_me_chatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D84039F5530790048602E9 /* Pods_Show_me_chatTests.framework */; };
 		3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F083A2391392D00E202DB /* HomeViewController.swift */; };
 		3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */; };
+		3D2DB58423ABBFC6000C5676 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58323ABBFC6000C5676 /* Message.swift */; };
+		3D2DB58923ABC0B8000C5676 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58623ABC0B8000C5676 /* MessageTableViewCell.swift */; };
+		3D2DB58A23ABC0B8000C5676 /* OutgoingMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58723ABC0B8000C5676 /* OutgoingMessageTableViewCell.swift */; };
+		3D2DB58B23ABC0B8000C5676 /* IncomingMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58823ABC0B8000C5676 /* IncomingMessageTableViewCell.swift */; };
+		3D2DB58E23ABC142000C5676 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB58D23ABC142000C5676 /* CALayer+Extensions.swift */; };
+		3D2DB59623ABC2C4000C5676 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59523ABC2C4000C5676 /* Colors.swift */; };
+		3D2DB59A23ABC3EC000C5676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DB59923ABC3EC000C5676 /* Assets.xcassets */; };
+		3D2DB59D23ABCB2F000C5676 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59C23ABCB2F000C5676 /* ChatViewController.swift */; };
+		3D2DB59F23ABCE71000C5676 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2DB59E23ABCE71000C5676 /* User.swift */; };
 		3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8B2333F5D3005D401F /* AppDelegate.swift */; };
 		3D542D8E2333F5D3005D401F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D8D2333F5D3005D401F /* MapViewController.swift */; };
 		3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */; };
-		3D542D962333F5D5005D401F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D542D952333F5D5005D401F /* Assets.xcassets */; };
 		3D542DA42333F5D5005D401F /* Show_me_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */; };
-		3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */; };
 		3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE5B79237DE46B00B61093 /* Constants.swift */; };
 		3DB998CD239A4BD0003695A6 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4467061823998CEA00755374 /* CustomInfoWindow.xib */; };
 		3DD3BB2F239A40C4005A430F /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */; };
@@ -39,17 +46,24 @@
 /* Begin PBXFileReference section */
 		2BDAE595D5F7AD8A4E427EEB /* Pods-Show-me-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.release.xcconfig"; sourceTree = "<group>"; };
 		3D1F083A2391392D00E202DB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D2DB58323ABBFC6000C5676 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3D2DB58623ABC0B8000C5676 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		3D2DB58723ABC0B8000C5676 /* OutgoingMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingMessageTableViewCell.swift; sourceTree = "<group>"; };
+		3D2DB58823ABC0B8000C5676 /* IncomingMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingMessageTableViewCell.swift; sourceTree = "<group>"; };
+		3D2DB58D23ABC142000C5676 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		3D2DB59523ABC2C4000C5676 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3D2DB59923ABC3EC000C5676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/ios-chat-using-swift-start-here/CometChat/CometChat/Assets.xcassets"; sourceTree = "<group>"; };
+		3D2DB59C23ABCB2F000C5676 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3D2DB59E23ABCE71000C5676 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3D542D882333F5D3005D401F /* Show-me-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show-me-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542D8B2333F5D3005D401F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D542D8D2333F5D3005D401F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3D542D932333F5D3005D401F /* Show_me_chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Show_me_chat.xcdatamodel; sourceTree = "<group>"; };
-		3D542D952333F5D5005D401F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D542D9F2333F5D5005D401F /* Show-me-chatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Show-me-chatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D542DA32333F5D5005D401F /* Show_me_chatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show_me_chatTests.swift; sourceTree = "<group>"; };
 		3D542DA52333F5D5005D401F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Show-me-chatTests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		3DAE5B72237DD0DD00B61093 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3DAE5B79237DE46B00B61093 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		3DDFC3A823999B7700A9F433 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Show-me-chat/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -96,6 +110,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3D2DB58223ABBF1D000C5676 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D2DB58323ABBFC6000C5676 /* Message.swift */,
+				3D2DB59E23ABCE71000C5676 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D2DB58523ABC075000C5676 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D2DB58823ABC0B8000C5676 /* IncomingMessageTableViewCell.swift */,
+				3D2DB58623ABC0B8000C5676 /* MessageTableViewCell.swift */,
+				3D2DB58723ABC0B8000C5676 /* OutgoingMessageTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3D2DB58C23ABC104000C5676 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D2DB58D23ABC142000C5676 /* CALayer+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D2DB59423ABC295000C5676 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3D2DB59523ABC2C4000C5676 /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3D2DB59B23ABCABC000C5676 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D2DB59C23ABCB2F000C5676 /* ChatViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		3D542D7F2333F5D3005D401F = {
 			isa = PBXGroup;
 			children = (
@@ -120,18 +177,22 @@
 		3D542D8A2333F5D3005D401F /* Show-me-chat */ = {
 			isa = PBXGroup;
 			children = (
+				3D2DB59B23ABCABC000C5676 /* View Controllers */,
+				3D2DB59423ABC295000C5676 /* Constants */,
+				3D2DB58C23ABC104000C5676 /* Extensions */,
+				3D2DB58523ABC075000C5676 /* Cells */,
+				3D2DB58223ABBF1D000C5676 /* Models */,
 				3DD3BB30239A4A9C005A430F /* Views */,
 				3DDFC3A823999B7700A9F433 /* Info.plist */,
 				3D542D8B2333F5D3005D401F /* AppDelegate.swift */,
-				3D542D952333F5D5005D401F /* Assets.xcassets */,
 				3D542D9A2333F5D5005D401F /* GoogleService-Info.plist */,
 				3D542D922333F5D3005D401F /* Show_me_chat.xcdatamodeld */,
 				CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */,
 				CE8BB5942359BD75001862CD /* LoginViewController.swift */,
-				3DAE5B75237DDCFC00B61093 /* ChatViewController.swift */,
 				3DAE5B79237DE46B00B61093 /* Constants.swift */,
 				3D542D8D2333F5D3005D401F /* MapViewController.swift */,
 				3D1F083A2391392D00E202DB /* HomeViewController.swift */,
+				3D2DB59923ABC3EC000C5676 /* Assets.xcassets */,
 			);
 			path = "Show-me-chat";
 			sourceTree = "<group>";
@@ -252,7 +313,7 @@
 			files = (
 				3DB998CD239A4BD0003695A6 /* CustomInfoWindow.xib in Resources */,
 				CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */,
-				3D542D962333F5D5005D401F /* Assets.xcassets in Resources */,
+				3D2DB59A23ABC3EC000C5676 /* Assets.xcassets in Resources */,
 				3D1F083C23915F4300E202DB /* GoogleService-Info.plist in Resources */,
 				447FDEAD23ABBF6400C17756 /* CreatingWindow.xib in Resources */,
 			);
@@ -356,9 +417,16 @@
 				3D542D8E2333F5D3005D401F /* MapViewController.swift in Sources */,
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
-				3DAE5B76237DDCFC00B61093 /* ChatViewController.swift in Sources */,
+				3D2DB59623ABC2C4000C5676 /* Colors.swift in Sources */,
+				3D2DB59F23ABCE71000C5676 /* User.swift in Sources */,
+				3D2DB58923ABC0B8000C5676 /* MessageTableViewCell.swift in Sources */,
+				3D2DB58A23ABC0B8000C5676 /* OutgoingMessageTableViewCell.swift in Sources */,
+				3D2DB58B23ABC0B8000C5676 /* IncomingMessageTableViewCell.swift in Sources */,
+				3D2DB58423ABBFC6000C5676 /* Message.swift in Sources */,
+				3D2DB59D23ABCB2F000C5676 /* ChatViewController.swift in Sources */,
 				3DD3BB2F239A40C4005A430F /* CustomInfoWindow.swift in Sources */,
 				3D1F083B2391392D00E202DB /* HomeViewController.swift in Sources */,
+				3D2DB58E23ABC142000C5676 /* CALayer+Extensions.swift in Sources */,
 				3DAE5B7A237DE46B00B61093 /* Constants.swift in Sources */,
 				CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */,
 				447FDEAF23ABC06300C17756 /* CreatingWindow.swift in Sources */,
