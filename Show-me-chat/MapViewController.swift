@@ -18,7 +18,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
-    var zoomLevel: Float = 15.0
+    var zoomLevel: Float = 5.0
     var db : Firestore!
     var is_creating = false
     var markerIsAlive = false
@@ -83,10 +83,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
 
    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        if(!is_creating){
         mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
         self.documentID = marker.userData as! String
         temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
         self.view.addSubview(temp)
+        }
         return false
     }
     
@@ -97,6 +99,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         temp.removeFromSuperview()
         if(is_creating){
+             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "X", style: .plain, target: self, action: #selector(stopCreating))
             mapView.camera =  GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: mapView.camera.zoom)
             creatingWindow.buttonYes.addTarget(self, action: #selector(MapViewController.createButtonTappedYes(_:)), for: .touchUpInside)
             creatingWindow.buttonNo.addTarget(self, action: #selector(MapViewController.createButtonTappedNo(_:)), for: .touchUpInside)
@@ -108,13 +111,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
             marker.map = self.mapView
             coordinates = coordinate
             markerIsAlive = true
-                //marker.userData = document.documentID
-                //markers.append(marker)
             
         }
     }
     
-
 
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
@@ -140,6 +140,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     
     @objc func createChat(){
         is_creating = true
+    }
+    
+    @objc func stopCreating(){
+        is_creating = false
+        creatingWindow.removeFromSuperview()
+        marker.map = nil
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
     }
     
     @objc func createButtonTappedYes(_ sender: UIButton!) {
