@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension CALayer {
     func addShadow(color: UIColor, offset: CGSize, radius: CGFloat) {

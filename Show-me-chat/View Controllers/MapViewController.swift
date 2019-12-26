@@ -84,15 +84,32 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         if(!is_creating){
-        
             mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
             self.documentID = marker.userData as! String
+            let docRef = db.collection("chats").document(documentID)
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                        let userChatRef = document.data()?["userChat"] as! DocumentReference
+                        userChatRef.getDocument { (document, error) in
+                            if let document = document, document.exists {
+                                let dataDescription = document.data()?["userIds"] as! [String]
+                                self.temp.label_.text = String(dataDescription.count) + "/50"
+                            } else {
+                                print("Document does not exist")
+                            }
+                        }
+                    
+                } else {
+                    print("Document does not exist")
+                }
+            }
             temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
             self.view.addSubview(temp)
             return false
         }
         return true
     }
+    
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         return UIView();
@@ -128,18 +145,32 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     }
     
     @objc func buttonTapped(_ sender: UIButton!) {
-        print(self.documentID)
-//        self.navigationController?.pushViewController(ChatViewController(), animated: false)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ChatWindow")
+    
+        let user = Auth.auth().currentUser
+        if let user = user {
+           let userId = user.uid
+            let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/addUserToChat?"
+            let url = URL(string: url_ + "userId=" +  String(userId) + "&chatId=" + String(self.documentID))!
         
-        self.present(controller, animated: true, completion: nil)
+            let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                        guard let data = data else {return}
+                        print(String(data: data, encoding: .utf8)!)
+            }
+            task.resume()
+        }
+            
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChatWindow") as! ChatViewController
+        controller.chatId = String(self.documentID)
+        
+        self.navigationController?.pushViewController(controller, animated: false)
     }
     
     @objc func addTapped() {
         do {
             try Auth.auth().signOut()
-        } catch let signOutError as NSError {
+        } catch _ as NSError {
             // Show error message
         }
     }
@@ -223,6 +254,8 @@ extension MapViewController: CLLocationManagerDelegate {
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
+        @unknown default:
+            <#fatalError()#>
         }
         
         print(status)

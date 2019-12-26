@@ -22,7 +22,7 @@ final class ChatViewController: UIViewController {
     }
     
     var db: Firestore!
-    var chatId: String = "DW8AyeNPQQuIhhXUfRUD"
+    public var chatId: String = ""
     var userId: String = ""
     
     // MARK: - Outlets
@@ -159,6 +159,26 @@ final class ChatViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
     }
+    
+    
+    override func viewDidDisappear(_ animated: Bool){
+        let user = Auth.auth().currentUser
+               if let user = user {
+                  let userId = user.uid
+                   let url_ = "https://us-central1-show-me-chat.cloudfunctions.net/removeUserFromChat?"
+                   let url = URL(string: url_ + "userId=" +  String(userId) + "&chatId=" + chatId)!
+               
+                   let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                               guard let data = data else {return}
+                               print(String(data: data, encoding: .utf8)!)
+                   }
+                   task.resume()
+               }
+    }
+    
+    
+
+    
     
     private func keyboardWillAppear(_ notification: Notification) {
         let key = UIResponder.keyboardFrameEndUserInfoKey

@@ -10,19 +10,25 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 
-class CustomInfoWindow: UIView {
 
+class CustomInfoWindow: UIView {
+    
     @IBOutlet var view: UIView!
     @IBOutlet weak var button_: UIButton!
+
     
+    @IBOutlet weak var label_: UILabel!
+    
+
     func loadViewFromNib(frame: CGRect) -> CustomInfoWindow {
+        
         print("loadViewFromNib")
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "CustomInfoWindow", bundle: bundle)
         view = nib.instantiate(withOwner: self, options: nil).first as! CustomInfoWindow
         view.frame = frame
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
+        
         return view as! CustomInfoWindow;
     }
 }
