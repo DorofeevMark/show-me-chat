@@ -86,6 +86,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         if(!is_creating){
             mapView.camera =  GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: mapView.camera.zoom)
             self.documentID = marker.userData as! String
+            let docRef = db.collection("chats").document(documentID)
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                        let userChatRef = document.data()?["userChat"] as! DocumentReference
+                        userChatRef.getDocument { (document, error) in
+                            if let document = document, document.exists {
+                                let dataDescription = document.data()?["userIds"] as! [String]
+                                self.temp.label_.text = String(dataDescription.count) + "/50"
+                            } else {
+                                print("Document does not exist")
+                            }
+                        }
+                    
+                } else {
+                    print("Document does not exist")
+                }
+            }
             temp.button_.addTarget(self, action: #selector(MapViewController.buttonTapped(_:)), for: .touchUpInside)
             self.view.addSubview(temp)
             return false
