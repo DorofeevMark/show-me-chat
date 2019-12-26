@@ -170,7 +170,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     @objc func addTapped() {
         do {
             try Auth.auth().signOut()
-        } catch let signOutError as NSError {
+        } catch _ as NSError {
             // Show error message
         }
     }
@@ -254,6 +254,8 @@ extension MapViewController: CLLocationManagerDelegate {
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
+        @unknown default:
+            <#fatalError()#>
         }
         
         print(status)

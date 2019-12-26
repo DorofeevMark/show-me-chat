@@ -128,9 +128,6 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.17.0)
   - GTMSessionFetcher/Core (1.3.0)
-  - JSQMessagesViewController (7.3.5):
-    - JSQSystemSoundPlayer (~> 2.0.1)
-  - JSQSystemSoundPlayer (2.0.1)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -147,7 +144,6 @@ DEPENDENCIES:
   - FirebaseUI/Google
   - GoogleMaps
   - GooglePlaces
-  - JSQMessagesViewController
 
 SPEC REPOS:
   trunk:
@@ -170,8 +166,6 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
-    - JSQMessagesViewController
-    - JSQSystemSoundPlayer
     - leveldb-library
     - nanopb
     - Protobuf
@@ -196,12 +190,10 @@ SPEC CHECKSUMS:
   "gRPC-C++": e76441995900ac90e9bd98644ab4733f12521edf
   gRPC-Core: 4028031ed2c5267cca0d846c876d8046b1ecb9b6
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
-  JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
-  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: 08018af13faccd517f0c0382bbc46bd13e69f0a4
+PODFILE CHECKSUM: 0bfbbbf27186021b983055c268184ee44b4e1c28
 
 COCOAPODS: 1.8.4

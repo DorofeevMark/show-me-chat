@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate{
         self.present(authViewController, animated: true, completion: nil)
     }
     
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    private func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
 //        self.authSuccess()
     }
  
