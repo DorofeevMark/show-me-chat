@@ -22,7 +22,7 @@ final class ChatViewController: UIViewController {
     }
     
     var db: Firestore!
-    var chatId: String = "DW8AyeNPQQuIhhXUfRUD"
+    public var chatId: String = ""
     var userId: String = ""
     
     // MARK: - Outlets
