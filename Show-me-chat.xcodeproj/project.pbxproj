@@ -68,7 +68,7 @@
 		447FDEAC23ABBF6400C17756 /* CreatingWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatingWindow.xib; sourceTree = "<group>"; };
 		447FDEAE23ABC06300C17756 /* CreatingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingWindow.swift; sourceTree = "<group>"; };
 		448791FA23AC133300335AC4 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		44B4B28F23ACB7FA0069D64E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../../../MapViewController.swift; sourceTree = "<group>"; };
+		44B4B28F23ACB7FA0069D64E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
