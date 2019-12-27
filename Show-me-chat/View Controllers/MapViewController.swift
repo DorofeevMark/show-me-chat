@@ -28,6 +28,9 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
     var markers = [GMSMarker]()
     var marker: GMSMarker!
     var coordinates: CLLocationCoordinate2D!
+    var controller: UIViewController!
+    var menuViewController: UIViewController!
+    var isMove = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,8 +77,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate{
         mapView.delegate = self
         
         navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(addTapped))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create chat", style: .plain, target: self, action: #selector(createChat))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(toggleMenu))
         
       
     }
@@ -254,8 +257,7 @@ extension MapViewController: CLLocationManagerDelegate {
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
-        @unknown default:
-            <#fatalError()#>
+      
         }
         
         print(status)
@@ -265,4 +267,54 @@ extension MapViewController: CLLocationManagerDelegate {
         //locationManager.stopUpdatingLocation()
         print("Error: \(error)")
     }
+    @objc func configureMenuViewController() {
+                 if menuViewController == nil {
+                    menuViewController = MenuViewController()
+                    view.insertSubview(menuViewController.view, at: 0)
+                    addChild(menuViewController)
+                  
+                     print("Добавили mainViewController")
+                 }
+             }
+           
+           
+             
+            @objc func showMenuViewController(shouldMove: Bool) {
+                 if shouldMove {
+                
+                     UIView.animate(withDuration: 2,
+                                    delay: 0,
+                                    usingSpringWithDamping: 0.8,
+                                    initialSpringVelocity: 0,
+                                    options: .beginFromCurrentState,
+                                    animations: {
+                                      self.menuViewController.view.frame.origin.x = self.view.frame.width - 140
+                     }) { (finished) in
+                         
+                     }
+                  view.insertSubview(self.menuViewController.view, at: 100)
+                  
+                 } else {
+                  
+                     UIView.animate(withDuration: 0.5,
+                                    delay: 0,
+                                    usingSpringWithDamping: 0.8,
+                                    initialSpringVelocity: 0,
+                                    options: .curveEaseInOut,
+                                    animations: {
+                                      self.menuViewController.view.frame.origin.x = 0
+                     }) { (finished) in
+                         
+                     }
+                   view.insertSubview(self.menuViewController.view, at: 0)
+                 }
+             }
+             
+             
+        @objc func toggleMenu() {
+                 configureMenuViewController()
+                 isMove = !isMove
+                 showMenuViewController(shouldMove: isMove)
+             }
 }
+
