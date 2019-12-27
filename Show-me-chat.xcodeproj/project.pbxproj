@@ -28,9 +28,9 @@
 		447FDEAF23ABC06300C17756 /* CreatingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FDEAE23ABC06300C17756 /* CreatingWindow.swift */; };
 		44B4B29023ACB7FB0069D64E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4B28F23ACB7FA0069D64E /* MapViewController.swift */; };
 		CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginViewController.swift */; };
-		CEBF757B23B5E988008DCB7C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF757A23B5E988008DCB7C /* MenuModel.swift */; };
 		CEBF757D23B5E992008DCB7C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF757C23B5E991008DCB7C /* MenuViewController.swift */; };
 		CEBF757F23B5E9AD008DCB7C /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF757E23B5E9AD008DCB7C /* MenuTableCell.swift */; };
+		CEBF758123B5F4A9008DCB7C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF758023B5F4A9008DCB7C /* MenuModel.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		FA3988C6269018BA47FED174 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */; };
 /* End PBXBuildFile section */
@@ -75,9 +75,9 @@
 		4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Show_me_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CEBF757A23B5E988008DCB7C /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuModel.swift; path = "../../../../../../Downloads/76. iOS12Swift 4-3/76. iOS12Swift 4.2 SideMenu-finished/Sushi App/Models/MenuModel.swift"; sourceTree = "<group>"; };
 		CEBF757C23B5E991008DCB7C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "../../../../show-me-chat/Show-me-chat/View Controllers/MenuViewController.swift"; sourceTree = "<group>"; };
 		CEBF757E23B5E9AD008DCB7C /* MenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableCell.swift; path = "../../../../../../Downloads/76. iOS12Swift 4-3/76. iOS12Swift 4.2 SideMenu-finished/Sushi App/Views/MenuTableCell.swift"; sourceTree = "<group>"; };
+		CEBF758023B5F4A9008DCB7C /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		CEDB8FA4234CA2D300A7D8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D87D6773D0E1038A1E737C42 /* Pods-Show-me-chatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chatTests.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chatTests/Pods-Show-me-chatTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBE96DCAAFBD222305C49DFD /* Pods-Show-me-chatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chatTests.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chatTests/Pods-Show-me-chatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,9 +117,9 @@
 		3D2DB58223ABBF1D000C5676 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CEBF757A23B5E988008DCB7C /* MenuModel.swift */,
 				3D2DB58323ABBFC6000C5676 /* Message.swift */,
 				3D2DB59E23ABCE71000C5676 /* User.swift */,
+				CEBF758023B5F4A9008DCB7C /* MenuModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -420,9 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBF757B23B5E988008DCB7C /* MenuModel.swift in Sources */,
 				CEBF757F23B5E9AD008DCB7C /* MenuTableCell.swift in Sources */,
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
+				CEBF758123B5F4A9008DCB7C /* MenuModel.swift in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
 				3D2DB59623ABC2C4000C5676 /* Colors.swift in Sources */,
 				3D2DB59F23ABCE71000C5676 /* User.swift in Sources */,
