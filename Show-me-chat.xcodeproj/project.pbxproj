@@ -29,8 +29,8 @@
 		44B4B29023ACB7FB0069D64E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4B28F23ACB7FA0069D64E /* MapViewController.swift */; };
 		CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BB5942359BD75001862CD /* LoginViewController.swift */; };
 		CEBF757D23B5E992008DCB7C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF757C23B5E991008DCB7C /* MenuViewController.swift */; };
-		CEBF757F23B5E9AD008DCB7C /* MenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF757E23B5E9AD008DCB7C /* MenuTableCell.swift */; };
 		CEBF758123B5F4A9008DCB7C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF758023B5F4A9008DCB7C /* MenuModel.swift */; };
+		CEBF758323B5F584008DCB7C /* MenuTableSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF758223B5F584008DCB7C /* MenuTableSell.swift */; };
 		CEDB8FA5234CA2D300A7D8E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDB8FA3234CA2D300A7D8E7 /* Main.storyboard */; };
 		FA3988C6269018BA47FED174 /* Pods_Show_me_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDD806A457A9EB109846CDE /* Pods_Show_me_chat.framework */; };
 /* End PBXBuildFile section */
@@ -76,8 +76,8 @@
 		A6472DE05B3E31291AE8661A /* Pods-Show-me-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chat.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chat/Pods-Show-me-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		CE8BB5942359BD75001862CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEBF757C23B5E991008DCB7C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "../../../../show-me-chat/Show-me-chat/View Controllers/MenuViewController.swift"; sourceTree = "<group>"; };
-		CEBF757E23B5E9AD008DCB7C /* MenuTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableCell.swift; path = "../../../../../../Downloads/76. iOS12Swift 4-3/76. iOS12Swift 4.2 SideMenu-finished/Sushi App/Views/MenuTableCell.swift"; sourceTree = "<group>"; };
 		CEBF758023B5F4A9008DCB7C /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		CEBF758223B5F584008DCB7C /* MenuTableSell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableSell.swift; sourceTree = "<group>"; };
 		CEDB8FA4234CA2D300A7D8E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D87D6773D0E1038A1E737C42 /* Pods-Show-me-chatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chatTests.release.xcconfig"; path = "Target Support Files/Pods-Show-me-chatTests/Pods-Show-me-chatTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBE96DCAAFBD222305C49DFD /* Pods-Show-me-chatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Show-me-chatTests.debug.xcconfig"; path = "Target Support Files/Pods-Show-me-chatTests/Pods-Show-me-chatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,11 +214,11 @@
 		3DD3BB30239A4A9C005A430F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEBF757E23B5E9AD008DCB7C /* MenuTableCell.swift */,
 				4467061823998CEA00755374 /* CustomInfoWindow.xib */,
 				3DD3BB2E239A40C4005A430F /* CustomInfoWindow.swift */,
 				447FDEAC23ABBF6400C17756 /* CreatingWindow.xib */,
 				447FDEAE23ABC06300C17756 /* CreatingWindow.swift */,
+				CEBF758223B5F584008DCB7C /* MenuTableSell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,7 +420,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBF757F23B5E9AD008DCB7C /* MenuTableCell.swift in Sources */,
 				3D542D942333F5D3005D401F /* Show_me_chat.xcdatamodeld in Sources */,
 				CEBF758123B5F4A9008DCB7C /* MenuModel.swift in Sources */,
 				3D542D8C2333F5D3005D401F /* AppDelegate.swift in Sources */,
@@ -436,6 +435,7 @@
 				3D2DB58E23ABC142000C5676 /* CALayer+Extensions.swift in Sources */,
 				3DAE5B7A237DE46B00B61093 /* Constants_.swift in Sources */,
 				CE8BB5952359BD75001862CD /* LoginViewController.swift in Sources */,
+				CEBF758323B5F584008DCB7C /* MenuTableSell.swift in Sources */,
 				447FDEAF23ABC06300C17756 /* CreatingWindow.swift in Sources */,
 				44B4B29023ACB7FB0069D64E /* MapViewController.swift in Sources */,
 			);
